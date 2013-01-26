@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Modularity and YOU!</title>
+	<meta name="viewport" content="width=1024">
+
+        <link rel="stylesheet" href="dist/coderdeck-core.min.css" type="text/css">
+	<link rel="stylesheet" id='style-theme-link' href="dist/coderdeck.css" type="text/css" >
+  <link rel="stylesheet" id='style-theme-link' href="toggle-switch/toggle-switch.css" type="text/css" >
+
+	<script src='dist/jquery.min.js'></script>
+	<script src="dist/modernizr.js"></script>
+
+  <!-- Probably we could move the following to just before the end of the body tag, but they're here so they are easy to find for demo purposes -->
+  <script src='lib/x-tag.js'></script>
+  <script src="toggle-switch/toggle-switch.js"></script>
+</head>
+<body class="deck-container">
+
+<script type='text/coderdeck' id='coderdeck-default'>
+  <html>
+    <head>
+      <script src='dist/jquery.min.js'>SCRIPTEND
+    </head>
+    <body>
+	    CODE
+    </body>
+</html>
+</script>
+
+
+<script type='text/coderdeck' id='coderdeck-style-example'>
+	<html>
+		<title>test</title>
+		<style>
+			CODE
+		</style>
+		<body>
+			<h1>I'm a H1 heading</h1>
+			<h2>I'm a H2 heading</h2>
+			<p>Pargraph of text &lt;p&gt; here</p>
+			<div class='stuff'>I'm a div &lt;div&gt; with class "stuff"</div>
+			<div id='my-div'>I'm a &lt;div&gt; with id "my-div"</div>
+		</body>
+	</html>
+</script> 	
+
+<article class='slide slide-subhead'>
+<h1>Modularity and YOU!</h1>
+<h2>Let's talk about building stuff.</h2>
+</article>
+
+<!-- Apply a class of "coder-editor" to a textarea to make it show up as runnable code -->
+<article class='slide slide-subhead'>
+<img src="img/bart.jpg">
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Facts about Angelina Fabbro<sup>*</sup>:</h2>
+  <img src="img/steamclock.jpg"/>
+  <ul>
+    <li>Writes the complicated code that runs on the Gastown Steamclock</li>
+    <li>Tweets whimsy and codethoughts as <strong><a href="http://www.twitter.com/angelinamagnum">@angelinamagnum</a></strong> on Twitter</li>
+    <li>Knows the secret location of the last unicorn</li>
+    <li>Polyglot developer</li>
+    <li>Has wrestled a bear and won</li>
+    <li>Teaches for Ladies Learning Code</li>
+    <li>Has eaten a raw onion faster than a table of competitors. Twice.</li>
+  </ul>
+  <p>That's basically everything you could ever need to know.</p>
+  <small>* Not all facts may actually be facts... but which ones? :3</small>
+</article>
+
+<article class='slide slide-subhead'>
+  <h1>ONWARD!</h1>
+</article>
+
+<article class='slide slide-subhead'>
+  <img src="img/webvsnative.png">
+</article>
+
+<article class='slide slide-subhead'>
+  <img src="img/catmate.jpg">
+  <h2>This is the fucking CATMATE 3000</h2>
+</article>
+
+<article class='slide slide-subhead'>
+  <img src="img/mayhem.jpg">
+  <h2>UGH I SURRENDER</h2>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>You are already a Firefox OS Developer!</h2>
+  <ul>
+    <li>Unlike programming the Catmate 3000, programming for Firefox OS is <em>easy</em></li>
+    <li>What is a good way to build apps for Firefox OS?</li>
+  </ul>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Let's talk about components.</h2>
+  <blockquote>"The best things that can be said about software is that it is too small." - <a href="http://www.twitter.com/substack">James Halliday/substack</a> during <a href="http://www.youtube.com/watch?feature=player_detailpage&v=zgt-jNqbxF8#t=586s">Code Collage</a> at JSConfEU 2012</a></blockquote>
+  <p>We should aim to:</p>
+  <ul>
+    <li>Build reusable components that do one thing really well, no more and no less</li>
+    <li>Have simple interfaces for them to communicate but remain loosely coupled</li>
+    <li>Ideally they would be...</li>
+  </ul>
+  <p>TJ Holowaychuck <a href="http://tjholowaychuk.com/post/27984551477/components">wrote a great article</a> on what makes a good component that you should read.</a></p>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Let's talk about encapsulation.</h2>
+  <img src="img/megazord.gif"/>
+  <h2>... by way of giant robots.</h2>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Awesome Browser Features</h2>
+  <ul>
+    <li>Custom Elements</li>
+    <li>HTML Templates</li>
+    <li>Shadow DOM</li>
+    <li>iframes... <em>I guess?</em></li>
+    <li>frameless iframes? <em>maybe</em>.</li>
+  </ul>
+  <h3>But.. specs are not finalized and implementation is limited :(</h3>
+  <h3>So far the only one of these we have true cross-browser support for is vanilla iframes. Boo.</h3>
+  <p>(<a href="http://www.youtube.com/watch?v=JNjnv-Gcpnw">Here is a talk I did for JSConf EU on this topic that provides more detail.</a>)
+</article>
+
+<article class='slide slide-subhead'>
+<h2>It would be really nice to use a component pattern that will be easy to adapt when these features are ready..</h2>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Well.</h2>
+  <h2>You <em>could</em> use X-Tags.</h2>
+  <h2><a href="http://www.x-tags.org">www.x-tags.org</a></h2>
+  <h2>&lt;X&gt;</h2>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Why you should use X-Tags over some other UI component library</h2>
+  <ul>
+    <li>It's not a component library! (There is a component registry)</li>
+    <li>No dependency on general purpose monolith libs</li>
+    <li>Tinier more modular components than many other libs</li>
+    <li>Going to introduce browser-supported encapsulation methods as implementations arrive and mature</li>
+    <li>Pretty easy to get started with, honestly - let's try one!</li>
+  </ul>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Step 1. Register your X-Tags</h2>
+  <pre class='prettyprint'>
+xtag.register('x-element', {
+  onUpgrade: function(){
+    // fired once at the time a component 
+    // is initially created or parsed
+  },
+  onInsert: function(){
+    // fired each time a component 
+    // is inserted into the DOM
+  },
+  events: {
+    'click:delegate(x-element)': function(){
+      // activate a clicked x-element
+    }
+  },
+  getters: {
+    'children': function(){
+      // return all element children
+    }
+  },
+  setters: {
+    // Similarly setters would go here
+  methods: {
+    nextAction: function(){
+      // activate next toggler
+      // 
+    },
+    previousAction: function(){
+      // activate the previous toggler
+    }
+  }
+});
+  </pre>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Step 2. Use your X-Tags in your HTML</h2>
+  <pre class="prettyprint">
+  &lt;x-toggle-switch input-name=&quot;fnords&quot;&gt;&lt;/x-toggle-switch&gt;
+  </pre>
+  <x-toggle-switch input-name="fnords"></x-toggle-switch>
+  <p>This x-tag is from the x-tag registry repo over <a href="https://github.com/mozilla/x-tag-elements/tree/master/toggle-switch">here</a>.</p>
+</article>
+
+<article class='slide slide-subhead'>
+  <h2>Mortar templates are your friend!</h2>
+  <h2>They make bootstrapping an app quick and easy</h2>
+  <h2>... and they use X-Tags</h2>
+  <h2>(Coming up in a later talk!)</h2>
+</article>
+
+<article class='slide slide-subhead fin'>
+  <h1>FIN.</h1>
+  <h2>Go build!</h2>
+  <h3>&dash; @angelinamagnum / afabbro on Github</h3>
+</article>
+
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Lato:300:latin', 'Quicksand::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<script src='dist/coderdeck.min.js'></script>
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
